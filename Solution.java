@@ -18,20 +18,14 @@ public class Solution
        for( int i=0; i<=brackets.length()-1; i++)
        {
            char ch = brackets.charAt(i);
-           if(ch=='<')
-           {
-              stack.push('<');
-           }
+           if(ch=='<')  stack.push('<');
            else if(ch=='>')
            {
               if(stack.size()==0)  stack.push(ch);
               else 
               {
                  char preCh = stack.peek();
-                 if(preCh=='<')
-                 {
-                    stack.pop();
-                 }
+                 if(preCh=='<')  stack.pop();
                  else stack.push(ch);
               }
            } 
